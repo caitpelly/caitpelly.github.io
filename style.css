@@ -58,6 +58,10 @@ sup, .sup {
   margin-top: -180px;
 }
 
+.bg-info {
+  background-color: rgb(6, 122, 109) !important;
+}
+
 .card-footer {
   background-color: white;
   padding: 1rem 1rem;
@@ -70,9 +74,10 @@ sup, .sup {
 
 .navbar-light .navbar-nav .nav-link {
   text-transform: uppercase;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
+
 
 .circle {
   border-radius: 500px;
@@ -116,6 +121,11 @@ header.p-section {
   padding: .30rem .75rem;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: rgb(5, 123, 117);
+  border-color: rgb(5, 123, 117);
+}
+
 .testimonial-item {
   max-width: 800px;
   padding: 40px;
@@ -138,7 +148,7 @@ header.p-section {
 
 .marker-highlight:before {
   content: "";
-  background-color: #0b6efd87;
+  background-color: #04767c87;
   width: 102%;
   height: 0.2em;
   position: absolute;
