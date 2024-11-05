@@ -163,3 +163,75 @@ header.p-section {
 width: 100px;
 margin-bottom: 20px;
 }
+
+.hover-logo {
+  display: inline-block;
+  margin: 8px;
+  width: 100px;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.hover-logo * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+.hover-logo::before,
+.hover-logo::after {
+  background-color: rgba(0, 0, 0, 0);
+  border-top: 8px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 8px solid rgba(0, 0, 0, 0.129);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0.5;
+  transform: scaleY(2);
+}
+
+.hover-logo img {
+  vertical-align: middle;
+  width: 100px;
+  backface-visibility: hidden;
+}
+
+.hover-logo figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 10px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hover-logo:hover::before,
+.hover-logo:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.hover-logo:hover > img {
+  opacity: 0;
+}
+
+.hover-logo:hover figcaption {
+  opacity: 1;
+}
